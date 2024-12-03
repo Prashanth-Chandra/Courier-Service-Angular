@@ -1,0 +1,121 @@
+<section class="vh-100">
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Registration Section -->
+      <div class="col-md-6 text-black registration-container">
+        <div class="registration-form">
+          <form 
+            name="form"
+            (ngSubmit)="f.form.valid && onSubmit()"
+            #f="ngForm"
+            novalidate>
+            <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">
+              <p class="rf">Registration Form</p>
+            </h3>
+            <!-- Full Name -->
+            <div class="form-outline mb-4">
+              <label class="form-label" for="fullName">Full Name</label>
+              <input
+                id="fullName"
+                placeholder="Enter your full name"
+                class="form-control form-control-lg"
+                type="text"
+                name="userfullname"
+                [(ngModel)]="form.userfullname"
+                required
+                minlength="3"
+                maxlength="20"
+                #userfullname="ngModel"
+                [ngClass]="{ 'is-invalid': f.submitted && userfullname.errors }" />
+              <div *ngIf="userfullname.errors && f.submitted" class="invalid-feedback">
+                Full name must be between 3 and 20 characters.
+              </div>
+            </div>
+            <!-- User Name -->
+            <div class="form-outline mb-4">
+              <label class="form-label" for="userName">User Name</label>
+              <input
+                id="userName"
+                placeholder="Enter a username"
+                class="form-control form-control-lg"
+                type="text"
+                name="username"
+                [(ngModel)]="form.username"
+                required
+                minlength="3"
+                maxlength="20"
+                #username="ngModel"
+                [ngClass]="{ 'is-invalid': f.submitted && username.errors }" />
+              <div *ngIf="username.errors && f.submitted" class="invalid-feedback">
+                Username must be between 3 and 20 characters.
+              </div>
+            </div>
+            <!-- Email -->
+            <div class="form-outline mb-4">
+              <label class="form-label" for="email">Email Address</label>
+              <input
+                id="email"
+                placeholder="Enter your email"
+                class="form-control form-control-lg"
+                type="email"
+                name="email"
+                [(ngModel)]="form.email"
+                required
+                email
+                #email="ngModel"
+                [ngClass]="{ 'is-invalid': f.submitted && email.errors }" />
+              <div *ngIf="email.errors && f.submitted" class="invalid-feedback">
+                Please enter a valid email address.
+              </div>
+            </div>
+            <!-- Password -->
+            <div class="form-outline mb-4">
+              <label class="form-label" for="password">Password</label>
+              <input
+                id="password"
+                placeholder="Enter your password"
+                class="form-control form-control-lg"
+                type="password"
+                name="password"
+                [(ngModel)]="form.password"
+                required
+                minlength="6"
+                #password="ngModel"
+                [ngClass]="{ 'is-invalid': f.submitted && password.errors }" />
+              <div *ngIf="password.errors && f.submitted" class="invalid-feedback">
+                Password must be at least 6 characters.
+              </div>
+            </div>
+            <input 
+              type="file" 
+              (change)="selectFiles($event)" 
+              accept="image/*" 
+              required />
+            <!-- Submit Button -->
+            <div class="pt-1 mb-4">
+              <button class="btn btn-primary btn-block">Sign Up</button>
+            </div>
+            <p class="small mb-5 pb-lg-2">
+              <a href="" routerLink="/forgotPassword">Forgot password?</a>
+            </p>
+            <p class="have-account">
+              Already have an account? <a href="" class="link-info" routerLink="/loginForm">Login here</a>
+            </p>
+          </form>
+          <div *ngIf="f.submitted && isSignUpFailed" class="alert alert-danger mt-3">
+            Signup failed! {{ errorMessage }}
+          </div>
+          <div *ngIf="f.submitted && !isSignUpFailed" class="alert mt-3">
+            {{ successMessage }}
+          </div>
+        </div>
+      </div>
+      <!-- Background Section -->
+      <div class="col-md-6 gradient-background">
+        <div class="art-container">
+          <div class="leaf-art"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

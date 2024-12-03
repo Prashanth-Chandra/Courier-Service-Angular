@@ -1,0 +1,190 @@
+@font-face {
+  font-family: 'Parkinsans-Bold';
+  src: url('/assets/fonts/Parkinsans-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+  }
+  
+  .first-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background-color:#f6f8ed;
+  }
+  
+  .text-center {
+    font-size: 5vw; /* Initial size */
+    font-weight: bold;
+    transition: transform 0.2s ease, font-size 0.2s ease;
+    will-change: transform, font-size;
+    text-align: center;
+    white-space: nowrap;
+  }
+  
+  .home-content {
+    height: 100vh;
+    background-color: #f6f8ed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  #section1 {
+    background-color: rgb(220, 240, 255);
+    justify-content: center;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .map-container {
+    position: relative;
+    width:90vw;
+    max-width: 1600px;
+    border: 1px solid black;
+    border-radius: 8px;
+    overflow: hidden;
+    top: 2rem;
+  }
+
+  .photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid */
+    gap: 10px;
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  .photo-gallery img {
+    top: 2rem;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .photo-gallery img:hover {
+    transform: scale(3);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .social-media-circles {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .circle {
+    width: calc(40px + 10vw); /* Base size with viewport width adjustment */
+    height: calc(40px + 10vw); /* Matches width for a perfect circle */
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-size: 70%; /* Shrinks the image within the circle */
+    background-repeat: no-repeat; /* Ensures no repetition of the image */
+    background-position: center; /* Centers the image */
+    background-color: #fff; /* Adds a neutral background */
+    border: 2px solid #ddd; /* Adds a border for better visibility */
+    cursor: pointer;
+  }
+
+  .circle:hover{
+    transform: scale(1.3);
+  }
+  
+  /* Assign different sizes to each circle for variety */
+  .circle.instagram {
+    background: linear-gradient(45deg, #fdf497, #fd5949, #d6249f, #285aeb); /* Instagram gradient */ 
+    width: calc(50px + 12vw);
+    height: calc(50px + 12vw);
+    top: 50%;
+    left: 10%;
+  
+  }
+  
+  .circle.linkedin {
+    background-color: #0077b5; /* LinkedIn blue */
+    width: calc(70px + 8vw);
+    height: calc(70px + 8vw);
+    top: 10%;
+    left: 20%;
+  
+  }
+  
+  .circle.facebook {
+    background:linear-gradient(135deg, white,#1877f2) ; /* Facebook blue */
+    width: calc(60px + 7vw);
+    height: calc(60px + 7vw);
+    top: 20%;
+    right: 40%;
+  
+  }
+  
+  .circle.twitter {
+    background-color: black; /* Twitter blue */
+    width: calc(40px + 6vw);
+    height: calc(40px + 6vw);
+    top: 50%;
+    left: 45%;
+  }
+  
+  .circle.youtube {
+    background: linear-gradient(45deg,#ff0000,grey); /* YouTube red */
+    width: calc(80px + 9vw);
+    height: calc(80px + 9vw);
+    top: 10%;
+    right: 10%;
+  }
+  
+  .circle.website {
+    background: linear-gradient(45deg, #6c63ff, #fca5a5); /* Custom gradient */ 
+    width: calc(100px + 10vw);
+    height: calc(100px + 10vw);
+    bottom: 10%;
+    left: 70%;
+  
+  }
+
+  .instagram {
+    background-image: url("/src/assets/insta.png");
+  }
+  
+  .linkedin {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png');
+  }
+  
+  .facebook {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg');
+  }
+  
+  .twitter {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/ce/X_logo_2023.svg');
+  }
+  
+  .youtube {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png');
+  }
+  
+  .website {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e2/Globe_icon.svg');
+  }

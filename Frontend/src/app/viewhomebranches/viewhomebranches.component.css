@@ -1,0 +1,29 @@
+.home-content {
+  height: 100vh;
+  background-color: #edefe4;
+}
+
+.content-container {
+  margin: 30px 200px 0 100px;
+}
+
+.heading {
+  margin-bottom: 30px;
+}
+
+.table {
+  font-size: 20px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th, .table td {
+  border: 1px solid #000000;
+  padding: 8px;
+  text-align: left;
+}
+
+.table th {
+  background-color: white;
+  font-weight: bold;
+}

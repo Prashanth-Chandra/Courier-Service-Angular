@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.vh-100 {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.registration-container {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 20px 0 0 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  padding: 50px;
+  color: black;
+}
+
+.rf {
+  font-size: 53px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.registration-form {
+  width: 80%;
+}
+
+.form-label {
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+}
+
+.form-control {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  font-size: 18px;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.have-account {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  color: black;
+  left: 3rem;
+}
+
+.link-info {
+  position: relative;
+  top: 1.6rem;
+  left: -8rem;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  color: #0056b3;
+}
+
+.link-info:hover {
+  color: black;
+}
+
+/* Background Section */
+.gradient-background {
+  background: linear-gradient(45deg, #a1c4fd, #c2e9fb, #d4fc79);
+  background-size: 200% 200%;
+  animation: gradientAnimation 10s ease infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.art-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.leaf-art {
+  background-image: url("/assets/trop.jpg"); /* Replace with actual URL */
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,27 @@
+<div class="home-content">
+  <div class="content-container">
+    <h3 class="heading"><b>Branches List</b></h3>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Branch Name</th>
+          <th scope="col">District Name</th>
+          <!-- <th scope="col">Area1 Name</th> -->
+          <th scope="col">Area Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Phone Number</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let v of form">
+          <td>{{ v.branchName }}</td>
+          <td>{{ v.districtName }}</td>
+          <!-- <td>{{ v.thanaName }}</td> -->
+          <td>{{ v.areaName }}</td>
+          <td>{{ v.email }}</td>
+          <td>{{ v.phoneNumber }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

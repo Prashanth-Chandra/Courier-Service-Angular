@@ -1,0 +1,87 @@
+@font-face {
+  font-family: 'Parkinsans-Bold';
+  src: url('/assets/fonts/Parkinsans-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+ html{
+    scroll-behavior: smooth;
+
+}
+
+.font{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    top: 40vh;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    font-family: Parkinsans-Bold;
+    z-index: 2;
+    transition: 0.3s ease-in-out;
+}
+
+.tex{
+  font-size:100px;
+  display: none;
+  transition: 0.3s ease-in-out;
+}
+
+#over{
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  position: absolute;
+  z-index: 1;
+  opacity: 0%;
+  transition: opacity 0.2s ease-in-out; 
+}
+
+header{
+    background-image: url("https://images.pexels.com/photos/4604599/pexels-photo-4604599.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-position: center;
+    background-size: cover;
+}
+
+header:hover #over{
+  opacity: 40%;
+}
+header:hover .tex{
+  display: block;
+}
+
+
+.banner-container{
+    height: 100vh;
+} 
+
+.navbar {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+}
+
+.navbar a {
+  float: right;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: #000;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}

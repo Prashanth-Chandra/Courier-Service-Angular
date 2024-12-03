@@ -1,0 +1,59 @@
+#features {
+    padding: 5% 10%;
+    height: 100vh;
+    background: linear-gradient(135deg, #a0d7fc, #ffffff);
+}
+
+.features-col {
+    border-radius: 15px;
+    position: relative;
+    top: 20%;
+    height: 20vh;
+    width: 50vw;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ensures cards stretch equally */
+}
+
+.features-col:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.features-col img {
+    max-width: 80px;
+    height: auto;
+}
+
+.features-col h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.features-col p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    #features {
+        padding: 5%;
+    }
+    .features-col {
+        margin: 20px 0;
+    }
+}
